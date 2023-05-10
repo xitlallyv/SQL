@@ -1,0 +1,32 @@
+--Create a store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, section TEXT, price INTEGER, popularity INTEGER);
+
+INSERT INTO store VALUES (1, "Tylenol", "pain reliever", 7.99, 88);
+INSERT INTO store VALUES (2, "Advil", "pain reliever", 6.99, 95);
+INSERT INTO store VALUES (3, "Aleve", "pain reliever", 4.99,  91);
+INSERT INTO store VALUES (4, "Claritin", "allergy", 5.99, 90);
+INSERT INTO store VALUES (5, "Zyrtec", "allergy", 8.99, 82);
+INSERT INTO store VALUES (6, "Benadryl", "allergy", 6.99, 86);
+INSERT INTO store VALUES (7, "Tums", "antacid", 4.50, 80);
+INSERT INTO store VALUES (8, "Zantac", "antacid", 8.99, 64);
+INSERT INTO store VALUES (9, "Pepcid", "antacid", 11.50, 55);
+INSERT INTO store VALUES (10, "Clear Eyes", "eye drops", 3.50, 70);
+INSERT INTO store VALUES (11, "Refresh", "eye drops", 14.50, 50);
+INSERT INTO store VALUES (12, "Visine", "eye drops", 3.50, 65);
+
+--display the database ordered by price. 
+SELECT * FROM store
+ORDER BY price desc; 
+
+--what is the average price of items in the pain reliever section?
+SELECT AVG(PRICE) 'avg pain reliever price'
+FROM store
+WHERE section="pain reliever";
+
+
+--List the top 3 most popular items.
+SELECT item, price, popularity
+FROM store
+ORDER BY popularity desc
+LIMIT 3;
