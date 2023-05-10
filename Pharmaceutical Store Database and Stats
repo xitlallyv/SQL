@@ -24,7 +24,6 @@ SELECT AVG(PRICE) 'avg pain reliever price'
 FROM store
 WHERE section="pain reliever";
 
-
 --List the top 3 most popular items.
 SELECT item, price, popularity
 FROM store
