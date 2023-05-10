@@ -16,7 +16,8 @@ INSERT INTO store VALUES (11, "Refresh", "eye drops", 14.50, 50);
 INSERT INTO store VALUES (12, "Visine", "eye drops", 3.50, 65);
 
 --display the database ordered by price. 
-SELECT * FROM store
+SELECT * 
+FROM store
 ORDER BY price desc; 
 
 --what is the average price of items in the pain reliever section?
